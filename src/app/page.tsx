@@ -2,7 +2,7 @@
 
 import React, {  useReducer, useState } from "react";
 import { Reducer } from "@/reducer/reducer";
-import { Item } from "../../../types/item";
+import { Item } from "../../types/item";
 
 
 const Home=()=> {
