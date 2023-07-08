@@ -18,7 +18,7 @@ const Home=()=> {
     dispatch({
       type: 'add',
       payload:{
-        text: inputValue.trim()
+        text: inputValue.trim().toUpperCase()
       }
     });
     setInputValue('')
@@ -61,21 +61,21 @@ const Home=()=> {
   }    
  
  return(
-    <div className="  min-h-screen w-full justify-around bg-gray-300 text-blac flex flex-col p-2 md:w-9/12 md:m-auto"> 
+    <div className="  min-h-screen w-full justify-around bg-blue-400 text-blac flex flex-col p-2 md:w-9/12 md:m-auto"> 
       
-      <div className=" overflow-y-scroll  max-h-96 flex-1 border-2 rounded border-primary100 bg-secundary/40">
+      <div className=" overflow-y-scroll  max-h-96 flex-1 border-2 rounded border-[#2632FF] bg-[#EBBC02]/40">
         <ul>
           {list.map((item)=>(
             <li className={`
             flex
             justify-around
-            bg-gray-200
+            bg-blue-400
             p-2
             m-1
             rounded
             border-2
-            border-primary200/50
-            text-secundary
+            border-[#2632FF]
+            text-[#fff]
             font-sans
             font-semibold
             items-center
@@ -86,18 +86,18 @@ const Home=()=> {
         </ul>
 
       </div>
-      <div className=" rounded my-1 w-full flex justify-around bg-gray-200 flex-2 h-40">
+      <div className=" border-[#2632FF] border-2 items-center rounded my-1 w-full flex justify-around bg-[#EBBC02]/40 flex-2 h-40">
                <div className="flex-1">
-                <input value={inputValue} onChange={e=>setInputValue(e.target.value)} className=" w-[90%] outline-none p-1 m-1 rounded bg-secundary/40 font-semibold font-serif  text-white" type="text"  placeholder="Escreva aqui seu item" />
+                <input value={inputValue} onChange={e=>setInputValue(e.target.value)} className=" w-[90%] outline-none p-1 m-1 rounded text-[#9E7E00] font-semibold font-serif" type="text"  placeholder="Escreva aqui seu item"  />
                </div>
-               <div className="bg-primary w-20 h-8 rounded p-1 m-1 text-secundary font-sans font-bold duration-500 ease-in-out hover:bg-primary100">
+               <div className="bg-[#020EEB] w-20 h-8 rounded p-1 m-1 text-[#EBBC02] font-sans font-bold duration-500 ease-in-out hover:bg-[#2632FF]">
                 <button onClick={handleAdd} >Adicionar</button>
                </div>
                
 
         </div>
 
-      <p className="text-center text-primary100">&copy;Todos os direitos reservado </p>
+      <p className="text-center text-[#020EEB]">&copy;Todos os direitos reservado </p>
     </div>
   );
 }
