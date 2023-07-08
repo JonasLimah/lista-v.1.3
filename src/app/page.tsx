@@ -11,7 +11,7 @@ const Home=()=> {
   
  const [inputValue,setInputValue] = useState('')
  const [list,dispatch] = useReducer(Reducer,[])
- localStorage.setItem("lista",JSON.stringify(list))
+
 
 
  const handleAdd = ()=>{
